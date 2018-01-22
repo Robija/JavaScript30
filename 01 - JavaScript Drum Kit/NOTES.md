@@ -28,3 +28,18 @@ In this example we use _transition: all 0.07s ease_
         Function _expressions_ cannot be called befor they are declared
         Function _declarations_ Can be called before they are declared
         this is the case because _function expressions_ are anononymous
+
+
+### AUDIO 
+
+* [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio]: <audio> : embedded sound content
+
+* Supertype is HTMLMediaElement, which provides us with the _play_ and _currentTime_ methods
+* JS already has a Map data structure, which renders the need of building a new one unnecessary
+
+
+### OTHER CONSTRUCTS USED
+
+#### for...of
+
+* iterates of the data of an object that can be iterated [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of]: for...of

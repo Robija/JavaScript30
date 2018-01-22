@@ -58,16 +58,23 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
- 
+	var audioMap = new Map();
+	function parseAudioTagsFromDocument(){
+		const audioTags = document.querySelectorAll("audio");
+		for(var audioTag of audioTags){
+			audioMap.set(audioTag.getAttribute("data-key"), audioTag);
+		}
+	}
+	parseAudioTagsFromDocument();
+
 	var keydownListener = function(e){
-		console.log(e.keyCode);
-		const audioSamples = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-		console.log(audioSamples);
-			
+		var audioSample = audioMap.get(e.keyCode.toString());
+		if(audioSample){	
+			audioSample.currentTime = 0.0;
+			audioSample.play();
+		}
 	};
 	window.addEventListener('keydown', keydownListener);
-
-
 </script>
 
 
