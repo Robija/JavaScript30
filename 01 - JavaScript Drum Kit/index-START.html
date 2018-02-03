@@ -70,8 +70,12 @@
 	var keydownListener = function(e){
 		var audioSample = audioMap.get(e.keyCode.toString());
 		if(audioSample){	
+
 			audioSample.currentTime = 0.0;
 			audioSample.play();
+			const divTag= document.querySelector(`div[data-key="${audioSample.getAttribute("data-key")}"]`);
+			divTag.classList.add('playing');
+			console.log(divTag);
 		}
 	};
 	window.addEventListener('keydown', keydownListener);
