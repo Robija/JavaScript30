@@ -21,15 +21,29 @@
 
 
   <script>
+    const time = {
+      hour: 0,
+      minute: 0,
+      second: 0
+    }
 
-        function setDate(){
-          const now = new Date();
+    const timeUnitInDegrees = 360/60;
+    const hourUnitInDegrees = timeUnitInDegrees * 5; 
+
+    function setDate(){
+      const now = new Date();
+      //time.hour = now.getHours();
+      //time.minute = now.getMinutes();
+      //time.seconds = now.getSeconds();
+
+      document.querySelector("div.hand.second-hand").style.transform = `rotate(${now.getSeconds() * timeUnitInDegrees + 90}deg)`;
+    }
 
 
-          
-        }
 
-        setInterval(1000, setDate);
+
+
+setInterval(setDate, 1000);
   </script>
 </body>
 </html>
