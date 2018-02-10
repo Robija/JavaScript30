@@ -47,6 +47,25 @@
       transform-origin: 100%;
       transition: all 0.05s;
       transition-timing-function: cubic-bezier(0, 3.51, 0.58, 1);
+      border-radius : 50% 0% 0% 50%
     }
+    
+    .second-hand {
+       height: 2px; 
+    }
+
+    .hour-hand {
+
+    }
+
+
+     
+
+
+
+
+
+
+
 
 
